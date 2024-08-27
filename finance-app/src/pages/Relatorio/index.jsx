@@ -11,7 +11,7 @@ const Relatorio = () => {
   useEffect(() => {
     const fetchReport = async () => {
       try {
-        const response = await axios.get('https://api-finance-khaki.vercel.app/report');
+        const response = await axios.get('http://localhost:3333/report');
         console.log(response.data.data); // Verifique o conteúdo da resposta
         setReport(response.data.data);
         setLoading(false);
