@@ -19,7 +19,7 @@ const GestaoDespesas = () => {
 
   const fetchExpenses = async () => {
     try {
-      const response = await axios.get('http://localhost:3333/expenses');
+      const response = await axios.get('https://api-node-js-ashy.vercel.app/expenses');
       setExpenses(response.data);
     } catch (error) {
       console.error('Erro ao buscar despesas:', error);
@@ -29,7 +29,7 @@ const GestaoDespesas = () => {
 
   const deleteExpense = async (id) => {
     try {
-      await axios.delete(`http://localhost:3333/expenses/${id}`);
+      await axios.delete(`https://api-node-js-ashy.vercel.app/expenses/${id}`);
       setExpenses(expenses.filter(expense => expense.id !== id));
       console.log('Despesa excluída com sucesso');
     } catch (error) {
@@ -81,7 +81,7 @@ const GestaoDespesas = () => {
 
   const updateExpense = async (id) => {
     try {
-      await axios.put(`http://localhost:3333/expenses/${id}`, updatedExpense);
+      await axios.put(`https://api-node-js-ashy.vercel.app/expenses/${id}`, updatedExpense);
       setExpenses(expenses.map(expense =>
         expense.id === id ? { ...expense, ...updatedExpense } : expense
       ));

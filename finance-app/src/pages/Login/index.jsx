@@ -12,7 +12,7 @@ function Login() {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:3333/login', { email, password });
+      const response = await axios.post('https://api-node-js-ashy.vercel.app/login', { email, password });
 
       if (response.status === 200) {
         // Redireciona para a tela de gestão de despesas se o login for bem-sucedido
