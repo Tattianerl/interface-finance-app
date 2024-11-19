@@ -18,4 +18,4 @@ Este é um aplicativo de gestão financeira desenvolvido para ajudar microempree
   
 ### Deploy
 O projeto está hospedado no Vercel e pode ser acessado [aqui](https://finance-app-lime-one.vercel.app/)
- para a versão online.
+visualização apenas da tela de login.
